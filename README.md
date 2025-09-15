@@ -13,7 +13,9 @@ Download the VITON-HD dataset
 
 # Testing
 The testing process consists of two stages: warping and try-on generation.
+
 #Stage 1: Warping
+
 bash
 python3 -m torch.distributed.run test_warping.py \
     --name test_partflow_vitonhd_unpaired_1109 \
@@ -23,7 +25,9 @@ python3 -m torch.distributed.run test_warping.py \
     --batchSize 2 --num_gpus 1 --label_nc 14 --launcher pytorch \
     --dataroot /path/to/your/VITON-HD-512 \
     --image_pairs_txt test_pairs_unpaired_1018.txt
+
 #Stage 2: Try-On Generation
+
 bash
 python3 -m torch.distributed.run test_tryon.py \
     --name test_gpvtongen_vitonhd_unpaired_1109 \
