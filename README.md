@@ -16,7 +16,8 @@ The testing process consists of two stages: warping and try-on generation.
 
 #Stage 1: Warping
 
-bash
+Run the following statement：
+
 python3 -m torch.distributed.run test_warping.py \
     --name test_partflow_vitonhd_unpaired_1109 \
     --PBAFN_warp_checkpoint 'checkpoints/LID-VTON_partflow_vitonhd_usepreservemask_lrarms_1027/PBAFN_warp_epoch_121.pth' \
@@ -28,7 +29,8 @@ python3 -m torch.distributed.run test_warping.py \
 
 #Stage 2: Try-On Generation
 
-bash
+Run the following statement：
+
 python3 -m torch.distributed.run test_tryon.py \
     --name test_gpvtongen_vitonhd_unpaired_1109 \
     --resize_or_crop None --verbose --tf_log \
